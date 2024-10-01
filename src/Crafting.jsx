@@ -310,6 +310,9 @@ const resourceSpriteMap = {
 };
 
 const iconSrc = new URL('./assets/IconSet.gif', import.meta.url).href;
+const Swamp = new URL('./assets/map-Swamp.png', import.meta.url).href;
+const Savannah = new URL('./assets/map-Savannah.png', import.meta.url).href;
+const Stream = new URL('./assets/map-Stream.png', import.meta.url).href;
 
 const Crafting = ({ setView }) => {
     const [searchTerm, setSearchTerm] = useState(''); // Search term state
@@ -368,6 +371,19 @@ const Crafting = ({ setView }) => {
 
     const handleMouseLeave = () => {
         setHoveredItem(null); // Remove the hovered item to hide the modal
+    };
+
+    const getMapImage = (location) => {
+        switch (location) {
+            case 'Swamp':
+                return Swamp;
+            case 'Savannah':
+                return Savannah;
+            case 'Stream':
+                return Stream;
+            default:
+                return null; // In case the location doesn't match any of these
+        }
     };
 
     return (
@@ -469,7 +485,7 @@ const Crafting = ({ setView }) => {
                                                 {hoveredItem === name && (
                                                     <div className="modal.show map-modal">
                                                         <img
-                                                            src={`./assets/map-${resourceSpriteMap[name]?.location}.png`}
+                                                            src={getMapImage(resourceSpriteMap[name]?.location)}
                                                             alt={`${name} map`}
                                                             className="map-image"
                                                         />
