@@ -365,7 +365,7 @@
     right: calc(20% - 146px);
 }
 
-@media screen and (min-width: 400px) {
+@media screen and (max-width: 700px) {
     .crafting-page{
         font-size: 1em;
         overflow-x: hidden;
