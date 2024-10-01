@@ -528,6 +528,7 @@ const Crafting = ({ setView }) => {
                     {/* Filter Modal content here */}
                 </div>
             )}
+
         </div>
     );
 };
