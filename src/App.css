@@ -47,6 +47,9 @@ body {
   z-index: -1;
   transform: translate(-50%, -50%);
   filter: blur(25px);
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
 }
 
 @media screen and (min-width: 400px) {
