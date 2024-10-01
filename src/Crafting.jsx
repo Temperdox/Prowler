@@ -461,7 +461,7 @@ const Crafting = ({ setView }) => {
                                         key={name}
                                         className={`total-cost-wrapper ${isComplete ? 'complete' : ''}`}
                                     >
-                                        <div className="content">
+                                        <div className="total-cost-content">
                                             {/* Background Image for sprite using the map */}
                                             <div
                                                 className="resource-image"

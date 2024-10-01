@@ -72,7 +72,7 @@
 
 .search-form input:hover,
 .search-form input:focus {
-    width: 300px;
+    width: 280px;
 }
 
 .search-form:hover button,
@@ -363,4 +363,77 @@
     position: absolute;
     bottom: 25px;
     right: calc(20% - 146px);
+}
+
+@media screen and (min-width: 400px) {
+    .crafting-page{
+        font-size: 1em;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+
+    #root{
+        overflow: hidden;
+        overscroll-behavior: contain;
+    }
+
+    .crafting-page .header{
+        display: block;
+        padding: 20px 0 70px 100px;
+        width: calc(100vw - 100px);
+    }
+
+    .crafting-page .header button{
+        margin-bottom: 10px;
+        font-weight: 800;
+    }
+
+    .search-form {
+        margin-left: 0;
+    }
+
+    .left-pane{
+        width: 60%;
+        font-size: 16px;
+        height: calc(100vh - 200px);
+    }
+
+    .left-pane .item-header{
+        min-width: 30vw;
+        left: -3vw;
+        position: relative;
+    }
+
+    .left-pane .checkmark {
+        height: 24px;
+        width: 14px;
+        margin-right: 4px;
+    }
+
+    .right-pane{
+        height: calc(100vh - 160px);
+        margin: 0;
+    }
+
+    .right-pane-bg{
+        width: calc(100vw - 190px);
+        overflow: hidden;
+    }
+
+    .total-cost-wrapper{
+        display: block;
+    }
+
+    .total-cost-count-wrapper {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .crafting-page .content {
+        height: calc(100vh - 150px);
+        width: calc(100vw - 20px);
+        overflow-x: hidden;
+        overflow-y: hidden;
+        padding: 10px;
+    }
 }

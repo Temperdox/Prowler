@@ -49,6 +49,18 @@ body {
   filter: blur(25px);
 }
 
+@media screen and (min-width: 400px) {
+  .splash-screen p{
+    font-size: 1em;
+  }
+  .splash-screen button{
+    font-size: 1.4em !important;
+  }
+  .splash-screen .background-video{
+    height: 100%;
+  }
+}
+
 .content {
   text-align: center;
   color: white;

@@ -75,3 +75,19 @@
 .box:hover {
     background-color: #555;
 }
+
+@media screen and (min-width: 400px) {
+    .box {
+        width: 130px;
+        height: 130px;
+        justify-content: space-evenly;
+    }
+    h3{
+        font-size: 1em;
+        text-align: center;
+        margin: 2px;
+    }
+    .fa-3x{
+        font-size: 2em;
+    }
+}
