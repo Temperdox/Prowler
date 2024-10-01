@@ -445,4 +445,10 @@
         overflow-y: hidden;
         padding: 10px;
     }
+
+    .resource-image{
+        margin-right: 5px;
+        margin-left: 5px;
+        transform: scale(.8);
+    }
 }
