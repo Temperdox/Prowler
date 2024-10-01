@@ -432,6 +432,19 @@
         display: block;
     }
 
+    .total-cost-wrapper{
+        min-height: 14vh;
+    }
+
+    .total-cost-content{
+        align-items: normal;
+        display: inline;
+    }
+
+    .right-pane ul li{
+        font-size: 1em;
+    }
+
     .total-cost-count-wrapper {
         align-items: center;
         justify-content: center;
@@ -446,8 +459,16 @@
     }
 
     .resource-image{
-        margin-right: 5px;
-        margin-left: 5px;
+        margin-right: 0px;
+        margin-left: 0px;
         transform: scale(.8);
+    }
+
+    .back-text, .filter-text {
+        display: none; /* Hide the text when screen is smaller than 1000px */
+    }
+
+    .back-icon, .filter-icon {
+        margin-right: 0; /* Remove margin when text is hidden */
     }
 }

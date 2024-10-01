@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import './Crafting.css';
 import itemsData from './Items.json'; // Import your JSON file
-import { faMapPin } from '@fortawesome/free-solid-svg-icons';
+import {faArrowLeft, faFilter, faMapPin} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 // Resource to sprite map
@@ -407,19 +407,34 @@ const Crafting = ({ setView }) => {
         }
     };
 
+    const clearCheckmarks = () => {
+        setSelectedItems([]); // Clear the selected items
+        localStorage.removeItem('selectedItems'); // Remove the selected items from localStorage
+    };
+
     return (
         <div className="crafting-page">
             <div className="header">
-                <button onClick={() => setView('menu')} className="back-button">Back</button>
-                <button onClick={() => setFilterModalVisible(true)} className="filter-button">Filter</button>
+                {/* Back button */}
+                <button onClick={() => setView('menu')} className="back-button">
+                    <FontAwesomeIcon icon={faArrowLeft} className="back-icon"/> <span className="back-text">Back</span>
+                </button>
 
-                {/* Search bar with live filtering */}
+                {/* Filter button */}
+                <button onClick={() => setFilterModalVisible(true)} className="filter-button">
+                    <FontAwesomeIcon icon={faFilter} className="filter-icon"/> <span
+                    className="filter-text">Filter</span>
+                </button>
+
+                <button onClick={clearCheckmarks} className="filter-button">Clear <span className="filter-text">Selection</span></button>
+
+                {/* Search bar */}
                 <form className="search-form" onSubmit={(e) => e.preventDefault()}>
                     <input
                         type="text"
                         placeholder="Search items..."
                         value={searchTerm}
-                        onChange={(e) => setSearchTerm(e.target.value)} // Update search term
+                        onChange={(e) => setSearchTerm(e.target.value)}
                         required
                     />
                 </form>
