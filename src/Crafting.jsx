@@ -323,17 +323,22 @@ const Crafting = ({ setView }) => {
     const [filterModalVisible, setFilterModalVisible] = useState(false);
     const [hoveredItem, setHoveredItem] = useState(null); // Track hovered item for the modal
 
-    // Function to load selected items from localStorage
-    const loadSelectedItems = () => {
+    // Function to load selected and acquired items from localStorage
+    const loadSelectedAndAcquiredItems = () => {
         const savedSelectedItems = localStorage.getItem('selectedItems');
+        const savedAcquiredItems = localStorage.getItem('acquiredItems');
+
         if (savedSelectedItems) {
             setSelectedItems(JSON.parse(savedSelectedItems));
         }
+        if (savedAcquiredItems) {
+            setAcquiredItems(JSON.parse(savedAcquiredItems));
+        }
     };
 
-    // Load selected items from localStorage when the component mounts
+    // Load selected and acquired items from localStorage when the component mounts
     useEffect(() => {
-        loadSelectedItems(); // On mount, load the selected items from localStorage
+        loadSelectedAndAcquiredItems(); // On mount, load the selected and acquired items from localStorage
     }, []);
 
     // Save selected items to localStorage whenever they change
@@ -344,6 +349,15 @@ const Crafting = ({ setView }) => {
             localStorage.removeItem('selectedItems');
         }
     }, [selectedItems]);
+
+    // Save acquired items to localStorage whenever they change
+    useEffect(() => {
+        if (Object.keys(acquiredItems).length > 0) {
+            localStorage.setItem('acquiredItems', JSON.stringify(acquiredItems));
+        } else {
+            localStorage.removeItem('acquiredItems');
+        }
+    }, [acquiredItems]);
 
     // Filter the items whenever the search term changes
     useEffect(() => {
@@ -410,6 +424,8 @@ const Crafting = ({ setView }) => {
     const clearCheckmarks = () => {
         setSelectedItems([]); // Clear the selected items
         localStorage.removeItem('selectedItems'); // Remove the selected items from localStorage
+        setAcquiredItems({}); // Clear the acquired items
+        localStorage.removeItem('acquiredItems'); // Remove the acquired items from localStorage
     };
 
     return (
@@ -417,13 +433,12 @@ const Crafting = ({ setView }) => {
             <div className="header">
                 {/* Back button */}
                 <button onClick={() => setView('menu')} className="back-button">
-                    <FontAwesomeIcon icon={faArrowLeft} className="back-icon"/> <span className="back-text">Back</span>
+                    <FontAwesomeIcon icon={faArrowLeft} className="back-icon" /> <span className="back-text">Back</span>
                 </button>
 
                 {/* Filter button */}
                 <button onClick={() => setFilterModalVisible(true)} className="filter-button">
-                    <FontAwesomeIcon icon={faFilter} className="filter-icon"/> <span
-                    className="filter-text">Filter</span>
+                    <FontAwesomeIcon icon={faFilter} className="filter-icon" /> <span className="filter-text">Filter</span>
                 </button>
 
                 <button onClick={clearCheckmarks} className="filter-button">Clear <span className="filter-text">Selection</span></button>
