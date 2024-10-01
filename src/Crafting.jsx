@@ -316,12 +316,34 @@ const Stream = new URL('./assets/map-Stream.png', import.meta.url).href;
 
 const Crafting = ({ setView }) => {
     const [searchTerm, setSearchTerm] = useState(''); // Search term state
-    const [filteredItems, setFilteredItems] = useState(itemsData); // State for filtered items
-    const [selectedItems, setSelectedItems] = useState([]);
+    const [filteredItems, setFilteredItems] = useState(Object.keys(itemsData)); // State for filtered items
+    const [selectedItems, setSelectedItems] = useState([]); // For storing selected items
     const [expandedItems, setExpandedItems] = useState({});
     const [acquiredItems, setAcquiredItems] = useState({}); // State for tracking acquired items
     const [filterModalVisible, setFilterModalVisible] = useState(false);
     const [hoveredItem, setHoveredItem] = useState(null); // Track hovered item for the modal
+
+    // Function to load selected items from localStorage
+    const loadSelectedItems = () => {
+        const savedSelectedItems = localStorage.getItem('selectedItems');
+        if (savedSelectedItems) {
+            setSelectedItems(JSON.parse(savedSelectedItems));
+        }
+    };
+
+    // Load selected items from localStorage when the component mounts
+    useEffect(() => {
+        loadSelectedItems(); // On mount, load the selected items from localStorage
+    }, []);
+
+    // Save selected items to localStorage whenever they change
+    useEffect(() => {
+        if (selectedItems.length > 0) {
+            localStorage.setItem('selectedItems', JSON.stringify(selectedItems));
+        } else {
+            localStorage.removeItem('selectedItems');
+        }
+    }, [selectedItems]);
 
     // Filter the items whenever the search term changes
     useEffect(() => {
@@ -340,12 +362,12 @@ const Crafting = ({ setView }) => {
     };
 
     const handleItemSelect = (itemName) => {
-        setSelectedItems((prev) => {
-            if (prev.includes(itemName)) {
-                return prev.filter((i) => i !== itemName);
-            } else {
-                return [...prev, itemName];
-            }
+        setSelectedItems((prevSelectedItems) => {
+            const updatedItems = prevSelectedItems.includes(itemName)
+                ? prevSelectedItems.filter((i) => i !== itemName) // Remove if already selected
+                : [...prevSelectedItems, itemName]; // Add if not already selected
+
+            return updatedItems;
         });
     };
 
@@ -366,7 +388,6 @@ const Crafting = ({ setView }) => {
 
     const handleMouseEnter = (name) => {
         setHoveredItem(name); // Set the hovered item to trigger the modal
-        console.log(name);
     };
 
     const handleMouseLeave = () => {
@@ -411,7 +432,6 @@ const Crafting = ({ setView }) => {
                         {filteredItems.length > 0 ? (
                             filteredItems.map((itemName) => (
                                 <div key={itemName} className="item">
-
                                     <div className="item-wrapper">
                                         <div
                                             className="item-header"
@@ -421,12 +441,11 @@ const Crafting = ({ setView }) => {
                                                 <input
                                                     type="checkbox"
                                                     onChange={() => handleItemSelect(itemName)}
-                                                    checked={selectedItems.includes(itemName)}
+                                                    checked={selectedItems.includes(itemName)} // Check if selected
                                                 />
                                                 <span className="checkmark"></span>
                                             </label>
-                                            {itemName} <span
-                                            className="expanded">{expandedItems[itemName] ? '-' : '+'}</span>
+                                            {itemName} <span className="expanded">{expandedItems[itemName] ? '-' : '+'}</span>
                                         </div>
                                         {expandedItems[itemName] && (
                                             <div className="item-details">
@@ -492,7 +511,6 @@ const Crafting = ({ setView }) => {
                                                     </div>
                                                 )}
                                                 <FontAwesomeIcon icon={faMapPin} size="2x" color="#21d321" />
-
                                             </div>
                                             <div
                                                 className="square total-cost-add"
@@ -510,11 +528,8 @@ const Crafting = ({ setView }) => {
                                                 {acquired}
                                             </div>
                                         </div>
-
-
                                     </div>
                                 );
-
                             })}
                         </ul>
                     ) : (
@@ -528,7 +543,6 @@ const Crafting = ({ setView }) => {
                     {/* Filter Modal content here */}
                 </div>
             )}
-
         </div>
     );
 };
