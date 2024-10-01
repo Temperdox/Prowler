@@ -469,7 +469,7 @@ const Crafting = ({ setView }) => {
                                                 {hoveredItem === name && (
                                                     <div className="modal.show map-modal">
                                                         <img
-                                                            src={`./src/assets/map-${resourceSpriteMap[name]?.location}.png`}
+                                                            src={`./assets/map-${resourceSpriteMap[name]?.location}.png`}
                                                             alt={`${name} map`}
                                                             className="map-image"
                                                         />
