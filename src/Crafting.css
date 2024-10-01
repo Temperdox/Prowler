@@ -213,7 +213,7 @@
     margin-right: 20px;
     color: white;
     overflow-y: auto;
-    height: calc(100vh - 120px);
+    height: calc(100vh - 100px);
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
 }
