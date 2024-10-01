@@ -13,7 +13,7 @@ const Home = () => {
             </video>
             <div className="content">
                 <h1>Prowler Walkthrough Tool</h1>
-                <h3>V0.108</h3>
+                <h3>V0.109</h3>
                 <Link to="/act-one">
                     <button aria-label="Act One Button">Act One</button>
                 </Link>
