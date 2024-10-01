@@ -1,0 +1,498 @@
+{
+  "Flimsy Pickaxe" :{
+    "category": "Tool",
+    "materials": [
+      { "name": "Ironbush Sticks", "quantity": 4 },
+      { "name": "Flint Shards", "quantity": 3 },
+      { "name": "Scaletree Vine", "quantity": 1 }
+    ],
+    "description": "A rudimentary tool used to break rocks or boulders. Destroyed after one use.",
+    "output": 1,
+    "effect": "Ability to break rocks and boulders (single use)"
+  },
+  "Flimsy Shears" :{
+    "category": "Tool",
+    "materials": [
+      { "name": "Serrated Blade Scrap", "quantity": 2 },
+      { "name": "Fasteners", "quantity": 1 }
+    ],
+    "description": "Serrated metal shears, used for cutting through thick, plaint material such as rubber strips. Destroyed after one use.",
+    "output": 1,
+    "effect": "Used to cut bindings in the Swamp"
+  },
+  "Exile's Talon" :{
+    "category": "Weapon",
+    "materials": [
+      { "name": "Scaletree Bark Chunk", "quantity": 1 },
+      { "name": "Scaletree Vine", "quantity": 1 },
+      { "name": "Flint Shards", "quantity": 1 }
+    ],
+    "description": "The desperate weapon of a Prowler separated from their pack, a chieftain of nothing and no-one.",
+    "output": 1,
+    "effect": "+2 Attack"
+  },
+  "Recluse's Talon" :{
+    "category": "Weapon",
+    "materials": [
+      { "name": "Scaletree Bark Chunk", "quantity": 1 },
+      { "name": "Woven Plant Fibres", "quantity": 2 },
+      { "name": "Braided Rope Bundle", "quantity": 1 },
+      { "name": "Broken Claw", "quantity": 2 }
+    ],
+    "description": "The crude weapon of a Prowler scraping by on their own, a chieftain of himself and his own making.",
+    "output": 1,
+    "effect": "+4 Attack"
+  },
+  "Wanderer's Talon" :{
+    "category": "Weapon",
+    "materials": [
+      { "name": "Flexwood Branches", "quantity": 2 },
+      { "name": "Dyed Fabric Sheet", "quantity": 1 },
+      { "name": "Woven Plant Fibres", "quantity": 1 },
+      { "name": "Monster Bone", "quantity": 2 }
+    ],
+    "description": "The rudimentary weapon of a Prowler foraging the Wilds, a chieftain discovering their new place in the world.",
+    "output": 1,
+    "effect": "+6 Attack"
+  },
+  "Skirmisher's Talon" :{
+    "category": "Weapon",
+    "materials": [
+      { "name": "Stinger Chitin", "quantity": 2 },
+      { "name": "Stinger Barb", "quantity": 3 },
+      { "name": "Rubbery Slab", "quantity": 1 }
+    ],
+    "description": "The rudimentary weapon of a Prowler foraging the Wilds, a chieftain discovering their new place in the world.",
+    "output": 1,
+    "effect": "+6 Attack"
+  },
+  "Shoddy Shortbow" :{
+    "category": "Weapon",
+    "materials": [
+      { "name": "Ironbush Sticks", "quantity": 3 },
+      { "name": "Savia Plant Foliage", "quantity": 2 },
+      { "name": "Scaletree Vine", "quantity": 1 }
+    ],
+    "description": "A crudely made shortbow, cobbled together with sticks, vines, and more than a bit of sheer hope. Requires Bone Arrows as ammunition.",
+    "output": 1,
+    "effect": "N/A"
+  },
+  "Basic Shortbow" :{
+    "category": "Weapon",
+    "materials": [
+      { "name": "Stringy Sinew", "quantity": 3 },
+      { "name": "Flexwood Branches", "quantity": 2 },
+      { "name": "Raw Hide", "quantity": 1 }
+    ],
+    "description": "A rudimentary shortbow made for hunting. Average in appearance and performance, but reliable in all manner of situations.",
+    "output": 1,
+    "effect": "N/A"
+
+  },
+  "Bone Arrows" :{
+    "category": "Weapon",
+    "materials": [
+      { "name": "Ironbush Sticks", "quantity": 1 },
+      { "name": "Bone Fragments", "quantity": 1 }
+    ],
+    "description": "Sharp pieces of bone attached to sturdy Ironbush shafts, a step up in complexity and power from casting stones. Somewhat effective against Health, ineffective against Armour.",
+    "output": 1,
+    "effect": "N/A"
+  },
+  "Stone Arrows" :{
+    "category": "Weapon",
+    "materials": [
+      { "name": "Flexwood Branches", "quantity": 2 },
+      { "name": "Flint Shards", "quantity": 2 }
+    ],
+    "description": "Sharpened pieces of stone, firmly affixed to flexwood shafts, that fly straighter, further, and faster than Bone Arrows. Moderately effective against Health, slightly effective against Armour.",
+    "output": 1,
+    "effect": "N/A"
+  },
+  "Stinger Arrows" :{
+    "category": "Weapon",
+    "materials": [
+      { "name": "Flexwood Branches", "quantity": 2 },
+      { "name": "Stinger Barb", "quantity": 2 }
+    ],
+    "description" : "These stinger barbs, affixed to sturdy flexwood shafts, have a painful and sometimes paralytic bite, but require a stronger draw to effectively penetrate foes. Moderately effective against Health, ineffective against Armour, 33% chance to Stun on hit.",
+    "output": 3,
+    "effect": "N/A"
+  },
+  "Throwing Knife Holster" :{
+    "category": "Weapon",
+    "materials": [
+      { "name": "Rubbery Slab", "quantity": 1 },
+      { "name": "Rubbery Strap", "quantity": 2 },
+      { "name": "Fasteners", "quantity": 1 }
+    ],
+    "description" : "A specially crafted pouch for holding sharp blades securely, but in such a manner they can be quickly drawn and thrown. A well-practised Trapper tradition, both for hunting and recreation.",
+    "output": 1,
+    "effect": "N/A"
+  },
+  "Weighted Throwing Knives" :{
+    "category": "Weapon",
+    "materials": [
+      { "name": "Rubbery Strap", "quantity": 1 },
+      { "name": "Serrated Blade Scrap", "quantity": 1 }
+    ],
+    "description" : "Heavy, but sharp! Used with the Snake Knife Holster. Each craft produces 3x knives.",
+    "output": 3,
+    "effect": "N/A"
+  },
+  "Scrappy Unders" :{
+    "category": "Gear",
+    "materials": [
+      { "name": "Woven Plant Fibres", "quantity": 2 },
+      { "name": "Savia Plant Foliage", "quantity": 2 }
+    ],
+    "description" : "Shoddily crafted undergarments. Offers a pitiful amount of defence and a single layer of protection against grapple attacks.",
+    "output": 1,
+    "effect": "N/A"
+  },
+  "Scrappy Pouch" :{
+    "category": "Gear",
+    "materials": [
+      { "name": "Woven Plant Fibres", "quantity": 2 },
+      { "name": "Savia Plant Foliage", "quantity": 2 }
+    ],
+    "description" : "A small and simple pouch, crafted from the basics of the jungle. It won't carry much, but it's better than nothing",
+    "output": 1,
+    "effect": "+5 Carry capacity"
+  },
+  "Makeshift Waterskin" :{
+    "category": "Gear",
+    "materials": [
+      { "name": "Savia Plant Foliage", "quantity": 2 },
+      { "name": "Scaletree Vine", "quantity": 1 }
+    ],
+    "description" : "A simple makeshift waterskin. Holds one drink's worth of water. Restores 250HP per drink.",
+    "output": 1,
+    "effect": "Restores 250HP per drink"
+  },
+  "Hand-Woven Earring" :{
+    "category": "Gear",
+    "materials": [
+      { "name": "Monster Bone", "quantity": 1 },
+      { "name": "Braided Rope Bundle", "quantity": 1 }
+    ],
+    "description" : "Piercing the fins with the gauges and rings of polished bone is a recent revival of a much older Prowler tradition, though younger Prowlers seem to emulate it more as rebellion than revenge for the old ways.",
+    "output": 1,
+    "effect": "+1 Attack"
+  },
+  "Hand-Woven Unders" :{
+    "category": "Gear",
+    "materials": [
+      { "name": "Stringy Sinew", "quantity": 1 },
+      { "name": "Woven Plant Fibres", "quantity": 1 },
+      { "name": "Broken Claw", "quantity": 2 }
+    ],
+    "description" : "Soft, comfortable underwear in a typical Prowler style. In times of recent peace and the rise of the Wild Pact, wearing only these unders with no need for extra armour gave a sense of hope for the future.",
+    "output": 1,
+    "effect": "+1 Defense"
+  },
+  "Hand-Woven Pouch" :{
+    "category": "Gear",
+    "materials": [
+      { "name": "Woven Plant Fibres", "quantity": 2 },
+      { "name": "Raw Hide", "quantity": 2 }
+    ],
+    "description" : "With the importance placed on personal effects amongst pack-bound Prowlers, a tail-pouch like this is one of the first pieces a youngling tends to fashion for themselves.",
+    "output": 1,
+    "effect": "+8 Carry capacity"
+  },
+  "Jungle Mask" :{
+    "category": "Gear",
+    "materials": [
+      { "name": "Ironbush Sticks", "quantity": 2 },
+      { "name": "Savia Plant Foliage", "quantity": 2 },
+      { "name": "Bone Fragments", "quantity": 1 }
+    ],
+    "description" : "An 'armoured' crown of leaves, bark, and plant fibres. It might stand up to the weather, and some incidental knocks, but don't expect too much.",
+    "output": 1,
+    "effect": "+1 Defense"
+  },
+  "Jungle Chestguard" :{
+    "category": "Gear",
+    "materials": [
+      { "name": "Scaletree Bark Chunk", "quantity": 2 },
+      { "name": "Savia Plant Foliage", "quantity": 3 },
+      { "name": "Broken Claw", "quantity": 2 }
+    ],
+    "description" : "Strips of firm barl, strung together into a protective vest of sorts. The segmented design is relatively flexible and unrestricted, but protects against only the broadest of blows.",
+    "output": 1,
+    "effect": "Restores 250HP per drink"
+  },
+  "Jungle Vambrace" :{
+    "category": "Gear",
+    "materials": [
+      { "name": "Ironbush Sticks", "quantity": 2 },
+      { "name": "Broken Claw", "quantity": 1 }
+    ],
+    "description" : "Scaletree bark's convex nature and rigidity makes for somewhat effective -- and somewhat uncomfortable -- improvised vambrace.",
+    "output": 1,
+    "effect": "+2 Defense"
+  },
+  "Jungle Tassets" :{
+    "category": "Gear",
+    "materials": [
+      { "name": "Ironbush Sticks", "quantity": 1 },
+      { "name": "Savia Plant Foliage", "quantity": 1 },
+      { "name": "Woven Plant Fibres", "quantity": 1 }
+    ],
+    "description" : "Savia leaves and Ironbush wood, joined together into flexible armour for the legs. Easy to move in, and minor protection against raking claws and biting teeth.",
+    "output": 1,
+    "effect": "+1 Defense"
+  },
+  "Spitter Charm" :{
+    "category": "Gear",
+    "materials": [
+      { "name": "Spitter Webbing", "quantity": 1 },
+      { "name": "Braided Rope Bundle", "quantity": 1 }
+    ],
+    "description" : "The flexible webbing that makes up this charm imnues in you a sense of light-footedness, allowing you to Dash at a reduced STM cost.",
+    "output": 1,
+    "effect": "Dashing costs less STM"
+  },
+  "Charger Crest Helmet" :{
+    "category": "Gear",
+    "materials": [
+      { "name": "Charger Crest Plate", "quantity": 2 },
+      { "name": "Braided Rope Bundle", "quantity": 1 },
+      { "name": "Savia Plant Foliage", "quantity": 1 }
+    ],
+    "description" : "The sturdy head crest of an Alpha Charger, lashed with rope into a helmet that provides additional resilience to being Stunned.",
+    "output": 1,
+    "effect": "N/A"
+  },
+  "Rubbery Headplate" :{
+    "category": "Gear",
+    "materials": [
+      { "name": "Rubbery Straps", "quantity": 2 },
+      { "name": "Fasteners", "quantity": 2 },
+      { "name": "Rubbery Straps", "quantity": 1 }
+    ],
+    "description" : "A ridged and hardened plate of rubber, fastened to the head by flexible straps. An atypical design by most monsters' standards, but surprisingly effective against dizzying blunt impacts.",
+    "output": 1,
+    "effect": "+2 Def, Stun effects reduced by 15%"
+  },
+  "Rubbery Chestwraps" :{
+    "category": "Gear",
+    "materials": [
+      { "name": "Rubbery Slab", "quantity": 2 },
+      { "name": "Rubbery Strap", "quantity": 2 },
+      { "name": "Fasteners", "quantity": 3 }
+    ],
+    "description" : "Chest straps and harness made from tensile rubber, decorated in a mixture of Trapper and Prowler styles and capable of defending against blunt impact. The tightness of the harness stimulates your chest muscles and focuses your breathing, helping you conserve stamina in battle.",
+    "output": 1,
+    "effect": "+2 Defense, STM increased by 150"
+  },
+  "Rubber Armwraps" :{
+    "category": "Gear",
+    "materials": [
+      { "name": "Rubbery Slab", "quantity": 1 },
+      { "name": "Fasteners", "quantity": 1 },
+      { "name": "Rouser Petal", "quantity": 2 }
+    ],
+    "description" : "Tight-fitting gloves, strengthened with rubber ribbing and buckles. The design affords a varying degree of protection to the inside and outside of your lower arms, and is often used in tandem by Trappers wielding Coiling Whips.",
+    "output": 1,
+    "effect": "+1 Defense, +1 Attack with Whip weapons"
+  },
+  "Rubbery Unders" :{
+    "category": "Gear",
+    "materials": [
+      { "name": "Rubber Strap", "quantity": 2 },
+      { "name": "Fasteners", "quantity": 1 }
+    ],
+    "description" : "Strappy underwear held tight and secured by multiple strips of rubber. It's not much in the way of physical protection, but it leaves your malehood feeling snug and well-supported.",
+    "output": 1,
+    "effect": "+1 Defense"
+  },
+  "Rubbery Kneepads" :{
+    "category": "Gear",
+    "materials": [
+      { "name": "Rubbery Slab", "quantity": 2 },
+      { "name": "Stinger Chitin", "quantity": 2 },
+      { "name": "Fasteners", "quantity": 1 }
+    ],
+    "description" : "Thick rubber kneepads, capped with metal plating. Moving through dense swamplands requires careful footwork and lunging strides, and trips and tumbles are far from uncommon. This Trapper leg protection seems to be made in response to such woes.",
+    "output": 1,
+    "effect": "+2 Defense"
+  },
+  "Chitin Armguard" :{
+    "category": "Gear",
+    "materials": [
+      { "name": "Stinger Chitin", "quantity": 3 },
+      { "name": "Stinger Barb", "quantity": 2 },
+      { "name": "Braided Rope Bundle", "quantity": 1 }
+    ],
+    "description" : "Carefully selected and shaped pieces of Stinger Chitin, formed into an impressive piece of armour for the entire right arm, this armguard strikes a fine balance between weight and protectiveness that few other materials can.",
+    "output": 1,
+    "effect": "+3 Defense"
+  },
+  "Chieftain's Mantle" :{
+    "category": "Gear",
+    "materials": [
+      { "name": "Stringy Sinew", "quantity": 1 },
+      { "name": "Raw Hide", "quantity": 3 },
+      { "name": "Branded Rope Bundle", "quantity": 1 },
+      { "name": "Woven Plant Fibres", "quantity": 2 },
+      { "name": "Chieftain's Clasp", "quantity": 1 }
+    ],
+    "description" : "This mantle, made from leather and adorned with charms in imitation of the one Chief Maku used to wear, denotes you as the chieftain of the Dusky Prowler pack... Even if you are now it's only remaining member.",
+    "output": 1,
+    "effect": "+3 Defense, +1 Leadership"
+  },
+  "Hand-Woven Bracer" :{
+    "category": "Gear",
+    "materials": [
+      { "name": "Raw Hide", "quantity": 2 },
+      { "name": "Woven Plant Fibres", "quantity": 2 },
+      { "name": "Stringy Sinew", "quantity": 1 }
+    ],
+    "description" : "Raw leather and stitched fabric combined together into a thick and resilient bracer for the forearm. An iconic piece of Prowler armour from not-so-distant days, worn by those who fought for territory and freedom.",
+    "output": 1,
+    "effect": "+2 Defense, +30 STM"
+  },
+  "Hand-Woven Waistwrap" :{
+    "category": "Gear",
+    "materials": [
+      { "name": "Dyed Fabric Sheet", "quantity": 1 },
+      { "name": "Raw Hide", "quantity": 2 },
+      { "name": "Braided Rope Bundle", "quantity": 2 }
+    ],
+    "description" : "Leather padding and stitched fabric faulds protect the waist without limiting freedom of movement. Prowler warriors would wear these along with vest to protect their vital areas whilst remaining swift and agile.",
+    "output": 1,
+    "effect": "+2 Defense"
+  },
+  "Poacher Loincloth" :{
+    "category": "Gear",
+    "materials": [
+      { "name": "Poacher Tatters", "quantity": 1 },
+      { "name": "Unnatural Metal Scrap", "quantity": 1 },
+      { "name": "Braided Rope Bundle", "quantity": 1 }
+    ],
+    "description" : "Leather padding and stitched fabric faulds protect the waist without limiting freedom of movement. Prowler warriors would wear these along with vest to protect their vital areas whilst remaining swift and agile.",
+    "output": 1,
+    "effect": "N/A"
+  },
+  "Metal Bar Piercings" :{
+    "category": "Gear",
+    "materials": [
+      { "name": "Inert Metal Fragment", "quantity": 2 }
+    ],
+    "description" : "A metal bar piercing with a subtle lustre. Apart from making you acutely aware of every touch of clothing against your nipples, they serve only an aesthetic purpose.",
+    "output": 1,
+    "effect": "N/A"
+  },
+  "Metal Ear Bar" :{
+    "category": "Gear",
+    "materials": [
+      { "name": "Inert Metal Fragment", "quantity": 2 }
+    ],
+    "description" : "A metal bar piercing with a subtle lustre that spans across your fin. This non-traditional style makes you feel rebellious, but not much else.",
+    "output": 1,
+    "effect": "N/A"
+  },
+  "Metal Ring Piercing" :{
+    "category": "Gear",
+    "materials": [
+      { "name": "Inert Metal Fragment", "quantity": 2 }
+    ],
+    "description" : "A metal ring piercing with a subtle lustre, crowning your taut abs and oft-exposed navel with an aesthetically pleasing but otherwise worthless piece of metal.",
+    "output": 1,
+    "effect": "N/A"
+  },
+  "Metal Brow Ring" :{
+    "category": "Gear",
+    "materials": [
+      { "name": "Inert Metal Fragment", "quantity": 2 }
+    ],
+    "description" : "A metal ring piercing with a subtle lustre, crowning your brow with an aesthetically pleasing but otherwise worthless piece of metal.",
+    "output": 1,
+    "effect": "N/A"
+  },
+  "Woven Plant Fibres" :{
+    "category": "Resource",
+    "materials": [
+      { "name": "Scaletree Vine", "quantity": 2 }
+    ],
+    "description" : "Plant fibres tightly woven into a bolt of highly useful textile.",
+    "output": 1,
+    "effect": "N/A"
+  },
+  "Braided Rope Bundle" :{
+    "category": "Resource",
+    "materials": [
+      { "name": "Scaletree Bark Chunk", "quantity": 2 }
+    ],
+    "description" : "A bundle of useful rope.",
+    "output": 1,
+    "effect": "N/A"
+  },
+  "Stitched Sheet" :{
+    "category": "Resource",
+    "materials": [
+      { "name": "Woven Plant Fibres", "quantity": 2 },
+      { "name": "Broken Claw", "quantity": 1 }
+    ],
+    "description" : "A large hand-woven sheet. Strong enough to shelter beneath.",
+    "output": 1,
+    "effect": "N/A"
+  },
+  "Hardened Clay Bricks" :{
+    "category": "Resource",
+    "materials": [
+      { "name": "Wet Clay Clum", "quantity": 3 }
+    ],
+    "description" : "Clay moulded and hardened into a brick.",
+    "output": 1,
+    "effect": "N/A"
+  },
+  "Light Bowgun Limbs" :{
+    "category": "Resource",
+    "materials": [
+      { "name": "Fasteners", "quantity": 2 },
+      { "name": "Bowed Metal Limbs", "quantity": 1 },
+      { "name": "Stingy Sinew", "quantity": 2 }
+    ],
+    "description" : "Part of a ranged weapon used by plains-dwelling tribes. These sturdy limbs and elastic sinew are designed to handle and direct the tension and forces of the bowgun's operation.",
+    "output": 1,
+    "effect": "N/A"
+  },
+  "Savia Foliage farm" :{
+    "category": "Structure",
+    "materials": [
+      { "name": "Scaletree Bark Chunk", "quantity": 2 },
+      { "name": "Scaletree Vine", "quantity": 1},
+      { "name": "Ironbush Sticks", "quantity": 4},
+      { "name": "Wet Clay Clump", "quantity": 4}
+    ],
+    "description" : "A Savia Foliage farm that can be constructed at the camp.",
+    "output": 1,
+    "effect": "Farm Savia"
+  },
+  "Ironbush Plant farm" :{
+    "category": "Structure",
+    "materials": [
+      { "name": "Scaletree Bark Chunk", "quantity": 2 },
+      { "name": "Scaletree Vine", "quantity": 2},
+      { "name": "Savia Plant Folaige", "quantity": 3},
+      { "name": "Wet Clay Clump", "quantity": 4}
+    ],
+    "description" : "An Ironbush Plant farm that can be constructed at the camp.",
+    "output": 1,
+    "effect": "Farm Ironbush"
+  },
+  "Training Dummy" :{
+    "category": "Structure",
+    "materials": [
+      { "name": "Fasteners", "quantity": 1 },
+      { "name": "Scaletree Bark Chunk", "quantity": 2},
+      { "name": "Braided Rope Bundle", "quantity": 1}
+    ],
+    "description" : "A Training Dummy that can be constructed at the camp. Used to hone skill and analyse technique.",
+    "output": 1,
+    "effect": "Training Dummy"
+  }
+}
