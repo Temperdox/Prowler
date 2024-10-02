@@ -392,9 +392,11 @@ const Crafting = ({ setView }) => {
         });
     };
 
-    // Function to check if an item is "complete" (all materials collected)
-    const isItemComplete = (item) => {
-        return item.materials.every(material => acquiredItems[material.name] >= material.quantity);
+    // Function to check if an item is "complete" (all materials collected) AND selected
+    const isItemCompleteAndSelected = (itemName) => {
+        const item = itemsData[itemName];
+        const isComplete = item.materials.every(material => acquiredItems[material.name] >= material.quantity);
+        return selectedItems.includes(itemName) && isComplete; // Check if item is selected and complete
     };
 
     const totalMaterials = selectedItems.reduce((acc, itemName) => {
@@ -466,8 +468,7 @@ const Crafting = ({ setView }) => {
                     <div className="accordion">
                         {filteredItems.length > 0 ? (
                             filteredItems.map((itemName) => {
-                                const item = itemsData[itemName];
-                                const completeClass = isItemComplete(item) ? 'complete' : ''; // Add "complete" class if item is done
+                                const completeClass = isItemCompleteAndSelected(itemName) ? 'complete' : ''; // Add "complete" class only if selected and complete
 
                                 return (
                                     <div key={itemName} className={`item ${completeClass}`}>
@@ -550,7 +551,7 @@ const Crafting = ({ setView }) => {
                                                         />
                                                     </div>
                                                 )}
-                                                <FontAwesomeIcon icon={faMapPin} size="2x" color="#9c65cd" />
+                                                <FontAwesomeIcon icon={faMapPin} size="2x" color="#21d321" />
                                             </div>
                                             <div
                                                 className="square total-cost-add"
