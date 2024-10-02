@@ -392,6 +392,11 @@ const Crafting = ({ setView }) => {
         });
     };
 
+    // Function to check if an item is "complete" (all materials collected)
+    const isItemComplete = (item) => {
+        return item.materials.every(material => acquiredItems[material.name] >= material.quantity);
+    };
+
     const totalMaterials = selectedItems.reduce((acc, itemName) => {
         const item = itemsData[itemName];
         item.materials.forEach((material) => {
@@ -460,37 +465,42 @@ const Crafting = ({ setView }) => {
                     <h3>Items</h3>
                     <div className="accordion">
                         {filteredItems.length > 0 ? (
-                            filteredItems.map((itemName) => (
-                                <div key={itemName} className="item">
-                                    <div className="item-wrapper">
-                                        <div
-                                            className="item-header"
-                                            onClick={() => toggleExpand(itemName)}
-                                        >
-                                            <label className="checkbox-container">
-                                                <input
-                                                    type="checkbox"
-                                                    onChange={() => handleItemSelect(itemName)}
-                                                    checked={selectedItems.includes(itemName)} // Check if selected
-                                                />
-                                                <span className="checkmark"></span>
-                                            </label>
-                                            {itemName} <span className="expanded">{expandedItems[itemName] ? '-' : '+'}</span>
-                                        </div>
-                                        {expandedItems[itemName] && (
-                                            <div className="item-details">
-                                                <p>Category: {itemsData[itemName].category}</p>
-                                                <p>Resources:</p>
-                                                {itemsData[itemName].materials.map((material) => (
-                                                    <p key={material.name}>
-                                                        {material.quantity} x {material.name}
-                                                    </p>
-                                                ))}
+                            filteredItems.map((itemName) => {
+                                const item = itemsData[itemName];
+                                const completeClass = isItemComplete(item) ? 'complete' : ''; // Add "complete" class if item is done
+
+                                return (
+                                    <div key={itemName} className={`item ${completeClass}`}>
+                                        <div className="item-wrapper">
+                                            <div
+                                                className="item-header"
+                                                onClick={() => toggleExpand(itemName)}
+                                            >
+                                                <label className="checkbox-container">
+                                                    <input
+                                                        type="checkbox"
+                                                        onChange={() => handleItemSelect(itemName)}
+                                                        checked={selectedItems.includes(itemName)} // Check if selected
+                                                    />
+                                                    <span className="checkmark"></span>
+                                                </label>
+                                                {itemName} <span className="expanded">{expandedItems[itemName] ? '-' : '+'}</span>
                                             </div>
-                                        )}
+                                            {expandedItems[itemName] && (
+                                                <div className="item-details">
+                                                    <p>Category: {itemsData[itemName].category}</p>
+                                                    <p>Resources:</p>
+                                                    {itemsData[itemName].materials.map((material) => (
+                                                        <p key={material.name}>
+                                                            {material.quantity} x {material.name}
+                                                        </p>
+                                                    ))}
+                                                </div>
+                                            )}
+                                        </div>
                                     </div>
-                                </div>
-                            ))
+                                );
+                            })
                         ) : (
                             <p>No matching items found</p>
                         )}
