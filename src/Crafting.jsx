@@ -552,7 +552,7 @@ const Crafting = ({ setView }) => {
                                                         />
                                                     </div>
                                                 )}
-                                                <FontAwesomeIcon icon={faMapPin} size="2x" color="#21d321" />
+                                                <FontAwesomeIcon icon={faMapPin} size="2x" color="#9c65cd" />
                                             </div>
                                             <div
                                                 className="square total-cost-add"
