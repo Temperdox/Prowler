@@ -84,20 +84,20 @@
     color: #ccc;
 }
 
-.filter-button {
+.crafting-page button {
     padding: 0.6em 1.2em;
     margin-left: 20px;
-    background-color: #444;
-    color: white;
-    border-radius: 50px;
+    background-color: #21d321;
+    color: black;
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-.filter-button:hover {
-    background-color: #333;
-    color: #f9f9f9;
+.crafting-page button:hover {
+    background-color: #9c65cd;
+    color: black;
+    /*border-color: #6b39b3;*/
 }
 
 /* Left Pane */
@@ -159,7 +159,7 @@
 
 /* When the checkbox is checked, add a blue background */
 .checkbox-container input:checked ~ .checkmark {
-    background-color: #21d321;
+    background-color: #9c65cd;
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
@@ -188,6 +188,7 @@
     display: flex; /* Use Flexbox */
     justify-content: space-between; /* Align text on left and span on right */
     align-items: center; /* Vertically center text and the + symbol */
+    font-weight: bold;
 }
 
 .item-details {
@@ -301,6 +302,11 @@
 }
 
 .total-cost-wrapper.complete {
+    background-color: #21d321;
+    color: black;
+}
+
+.item.complete .item-header {
     background-color: #21d321;
     color: black;
 }
