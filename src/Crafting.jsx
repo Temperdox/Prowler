@@ -465,6 +465,7 @@ const Crafting = ({ setView }) => {
             <div className="content">
                 <div className="left-pane">
                     <h3>Items</h3>
+                    <p><strong>Note:</strong> Items that items highlighted <strong><span style={{color: "#21d321"}}>green</span></strong> means that you have collected enough items to craft the <u><strong>SELECTED</strong></u> item, <u><strong>NOT ALL</strong></u> items selected.</p>
                     <div className="accordion">
                         {filteredItems.length > 0 ? (
                             filteredItems.map((itemName) => {
