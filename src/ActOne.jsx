@@ -3,17 +3,20 @@ import { useNavigate } from 'react-router-dom'; // Import useNavigate for routin
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCalculator, faMap, faList } from '@fortawesome/free-solid-svg-icons';
 import Crafting from './Crafting.jsx'; // Import Crafting component
+import Walkthrough from './Walkthrough.jsx'; // Import Walkthrough component
 import './ActOne.css';
 import homeIcon from './assets/icon.png'; // Import your home icon image
 
 const ActOne = () => {
-    const [view, setView] = useState('menu'); // Track current view (menu, crafting, etc.)
+    const [view, setView] = useState('menu'); // Track current view (menu, crafting, walkthrough, etc.)
     const navigate = useNavigate(); // Hook for navigation
 
     // Conditional rendering based on the current view
     const renderContent = () => {
         if (view === 'crafting') {
             return <Crafting setView={setView} />; // Pass setView to go back to the menu
+        } else if (view === 'walkthrough') {
+            return <Walkthrough setView={setView} />; // Pass setView to go back to the menu
         } else {
             return (
                 <div className="box-container">
@@ -27,7 +30,7 @@ const ActOne = () => {
                         <FontAwesomeIcon icon={faMap} size="3x" />
                     </div>
 
-                    <div className="box" onClick={() => alert('Walkthrough - Coming Soon!')}>
+                    <div className="box" onClick={() => setView('walkthrough')}>
                         <h3>Walkthrough</h3>
                         <FontAwesomeIcon icon={faList} size="3x" />
                     </div>

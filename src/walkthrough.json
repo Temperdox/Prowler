@@ -1,0 +1,187 @@
+{
+  "General Information" : {
+    "class" : "node main",
+    "Species" : {
+      "class" : "node",
+      "Hawkster" : {
+        "class" : "node",
+        "Hu-Mina" : {
+          "class" : "node character card",
+          "image" : "",
+          "description" : "Merchant",
+          "gender" : "Female"
+        }
+      },
+      "Prowler": {
+        "class" : "node",
+        "Kivuli": {
+          "class" : "node character card",
+          "image" : "",
+          "description" : "Main Character",
+          "gender" : "Male"
+        },
+        "Makuri": {
+          "class" : "node character card",
+          "image" : "",
+          "description" : "Dusk Prowler village <spoil>ex-</spoil>chief ",
+          "gender" : "Male"
+        },
+        "Sumari": {
+          "class" : "node character card",
+          "image" : "",
+          "description" : "Dusk Prowler Pack brother",
+          "gender" : "Male"
+        }
+      }
+    }
+  },
+  "Introduction" : {
+    "class" : "node main",
+    "Events" : {
+      "class" : "node",
+      "Collect Resources" : {
+        "class" : "node task card",
+        "image" : "",
+        "description" : "Collect resources",
+        "objective" : {
+          "task" : "Collect",
+          "subject" : "Ironbush Sticks",
+          "quantity" : 3
+        },
+        "isOptional" : false,
+        "isSpoilered" : true
+      }
+    },
+    "Interactions" : {
+      "class" : "node",
+      "Well" : {
+        "class" : "node interaction card",
+        "description" : "A well you can interact with to refill your waterskin in the center of the prowler camp.",
+        "objective" : "Fill waterskin",
+        "isOptional" : true,
+        "isSpoilered" : false
+      },
+      "Pronounciation of Names" : {
+        "class" : "node interaction card",
+        "description" : "By speaking with Hu-Mina at the merchant area to the right of the well, Hu-Mina will verbally pronounce Kivuli's and her own name.",
+        "objective" : "Speak with Hu-Mina at the merchants tent.",
+        "isOptional" : true,
+        "isSpoilered" : false
+      }
+    },
+    "Encounters" : {
+      "class" : "node",
+      "Makuri" : {
+        "class" : "node encounter card",
+        "showCharacterCard" : true,
+        "whereToEncounter" : ["First scene","<spoil>In prowler camp in chief's tent</spoil>"]
+      },
+      "Sumari" : {
+        "class" : "node encounter card",
+        "showCharacterCard" : true,
+        "whereToEncounter" : ["First scene","In prowler camp in chief's tent"]
+      },
+      "Hu-Mina" : {
+        "class" : "node encounter card",
+        "showCharacterCard" : true,
+        "whereToEncounter" : ["First scene","In prowler camp in chief's tent"]
+      },
+      "Garth" : {
+        "class" : "node encounter card",
+        "showCharacterCard" : true,
+        "whereToEncounter" : ["First scene","In prowler camp in chief's tent"]
+      }
+    }
+  },
+  "Main Camp" : {
+    "class" : "node main",
+    "Events" : {
+      "class" : "node",
+      "Collect Resources" : {
+        "class" : "node task card",
+        "image" : "",
+        "description" : "Collect resources",
+        "objective" : {
+          "task" : "Collect",
+          "subject" : "Ironbush Sticks",
+          "quantity" : 3
+        },
+        "isOptional" : false,
+        "isSpoilered" : true
+      }
+    },
+    "Interactions" : {
+      "class" : "node",
+      "Well" : {
+        "class" : "node interaction card",
+        "description" : "A well you can interact with to refill your waterskin in the center of the prowler camp.",
+        "objective" : "Fill waterskin",
+        "isOptional" : true,
+        "isSpoilered" : false
+      },
+      "Pronounciation of Names" : {
+        "class" : "node interaction card",
+        "description" : "By speaking with Hu-Mina at the merchant area to the right of the well, Hu-Mina will verbally pronounce Kivuli's and her own name.",
+        "objective" : "Speak with Hu-Mina at the merchants tent.",
+        "isOptional" : true,
+        "isSpoilered" : false
+      }
+    },
+    "Encounters" : {
+      "class" : "node",
+      "Makuri" : {
+        "class" : "node encounter card",
+        "showCharacterCard" : true,
+        "whereToEncounter" : ["First scene","In prowler camp in chief's tent"]
+      },
+      "Sumari" : {
+        "class" : "node encounter card",
+        "showCharacterCard" : true,
+        "whereToEncounter" : ["First scene","In prowler camp in chief's tent"]
+      },
+      "Hu-Mina" : {
+        "class" : "node encounter card",
+        "showCharacterCard" : true,
+        "whereToEncounter" : ["First scene","In prowler camp in chief's tent"]
+      },
+      "Garth" : {
+        "class" : "node encounter card",
+        "showCharacterCard" : true,
+        "whereToEncounter" : ["First scene","In prowler camp in chief's tent"]
+      }
+    },
+    "Upgrades & Utilities" : {
+      "class" : "node",
+      "Base Upgrades" : {
+        "class" : "node"
+      },
+      "Storage Upgrades" : {
+        "class" : "node"
+      },
+      "Structures" : {
+        "class" : "node"
+      },
+      "Crafting" : {
+        "class" : "node"
+      }
+    }
+  },
+  "Main Locations" : {
+    "class" : "node main",
+    "Glistening Stream": {
+      "class" : "node"
+    },
+    "Sun-Streaked Savannah": {
+      "class" : "node"
+    },
+    "Murky Swamplands": {
+      "class" : "node"
+    }
+  },
+  "Sub Locations" : {
+    "class" : "node main",
+    "Jungle Holding Site" : {
+      "class" : "node"
+    }
+  }
+}
