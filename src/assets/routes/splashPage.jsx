@@ -179,7 +179,7 @@ function SplashPage() {
                         </div>
                     </div>
                     <div className="game-box">
-                        <img className="game-image" src="../images/ProwlerDownloadImage.png"
+                        <img className="game-image" src="./assets/images/ProwlerDownloadImage.png"
                              alt="Prowler Download Image"/>
                         <div className="game-container">
                             <h3>Get the game on Itch.io!</h3>
