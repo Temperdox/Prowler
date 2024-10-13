@@ -1,4 +1,4 @@
-import {useEffect, useRef, useState} from 'react';
+ import {useEffect, useRef, useState} from 'react';
 import {
     BrowserRouter as Router,
     Route,
@@ -7,16 +7,16 @@ import {
     useNavigate,
     useLocation
 } from 'react-router-dom';
-import './splashPage.css';
-import Modal from './assets/components/modal.jsx';
+import '../splashPage.css';
+import Modal from '../assets/components/modal.jsx';
 import Cookies from 'js-cookie';
-import Card from "./assets/components/card.jsx";
+import Card from "../assets/components/card.jsx";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faCalculator, faList, faMap} from "@fortawesome/free-solid-svg-icons";
 import {faXTwitter, faDiscord, faItchIo} from "@fortawesome/free-brands-svg-icons";
-import Crafting from "./routes/Crafting.jsx";
-import Walkthrough from "./routes/Walkthrough.jsx";
-import initializeStarCanvas from './assets/js/splashStars';
+import Crafting from "./Crafting.jsx";
+import Walkthrough from "./Walkthrough.jsx";
+import initializeStarCanvas from '../assets/js/splashStars.js';
 
 function SplashPage() {
     const [isVerified, setIsVerified] = useState(false);
@@ -272,17 +272,4 @@ function SplashPage() {
     );
 }
 
-function App() {
-    return (
-        <Router>
-            <Routes>
-                <Route path="/" element={<SplashPage/>}/>
-                {/* Add more routes here if needed */}
-                <Route path="/crafting" element={<Crafting/>}/>
-                <Route path="/walkthrough" element={<Walkthrough/>}/>
-            </Routes>
-        </Router>
-    );
-}
-
-export default App;
+export default SplashPage;
