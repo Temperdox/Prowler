@@ -3,14 +3,14 @@ import {
     useNavigate,
     useLocation
 } from 'react-router-dom';
-import '../assets/css/splashPage.css';
-import Modal from '../assets/components/modal.jsx';
+import '../css/splashPage.css';
+import Modal from '../components/modal.jsx';
 import Cookies from 'js-cookie';
-import Card from "../assets/components/card.jsx";
+import Card from "../components/card.jsx";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faCalculator, faList, faMap} from "@fortawesome/free-solid-svg-icons";
 import {faXTwitter, faDiscord, faItchIo} from "@fortawesome/free-brands-svg-icons";
-import initializeStarCanvas from '../assets/js/splashStars.js';
+import initializeStarCanvas from '../js/splashStars.js';
 
 function SplashPage() {
     const [isVerified, setIsVerified] = useState(false);
@@ -96,7 +96,7 @@ function SplashPage() {
 
     const transformLayer = ({x, y}) => {
         // Define the parallax image location
-        const parallaxImageLoc = 'src/assets/images/splash/';
+        const parallaxImageLoc = './assets/images/splash/';
         // Simulate the list of files (in real-life scenarios you might want to fetch these from the server)
         const listOfFiles = [
             'farMountains.webp',
@@ -135,7 +135,7 @@ function SplashPage() {
     return (
         <>
             <Modal show={!isVerified}>
-                <img className="modalImage" src="../assets/images/AgeWarningLabel.png"
+                <img className="modalImage" src="./images/AgeWarningLabel.png"
                      alt="18+ Warning Label Image"/>
                 <p>By accessing this site, you agree and declare that you are of legal age to view adult content such as
                     but not limited to NSFW (not safe for work) material.</p>
@@ -179,7 +179,7 @@ function SplashPage() {
                         </div>
                     </div>
                     <div className="game-box">
-                        <img className="game-image" src="../../src/assets/images/ProwlerDownloadImage.png"
+                        <img className="game-image" src="./images/ProwlerDownloadImage.png"
                              alt="Prowler Download Image"/>
                         <div className="game-container">
                             <h3>Get the game on Itch.io!</h3>
@@ -199,14 +199,14 @@ function SplashPage() {
                 </div>
                 <div className="section v-center">
                     <Card
-                        imgUrl="../assets/images/testImage.jpg"
+                        imgUrl="./assets/images/testImage.jpg"
                         title="Crafting Calculator"
                         description="A tool to calculate the total cost of materials needed to craft selected items."
                     >
                         <FontAwesomeIcon icon={faCalculator} size="3x"/>
                     </Card>
                     <Card
-                        imgUrl="../assets/images/testImage.jpg"
+                        imgUrl="./assets/images/testImage.jpg"
                         title="Interactive Map"
                         description="An interactive map that certain locations can be selected to view various information about the destination. Examples include resources and enimies."
                         position="right"
@@ -214,7 +214,7 @@ function SplashPage() {
                         <FontAwesomeIcon icon={faMap} size="3x"/>
                     </Card>
                     <Card
-                        imgUrl="../assets/images/testImage.jpg"
+                        imgUrl="./assets/images/testImage.jpg"
                         title="Walkthrough Flowchart"
                         description="An interactive flowchart that can be expanded to see various information about accessible routes, game overs, nsfw scenes and other information."
                     >

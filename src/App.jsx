@@ -1,7 +1,7 @@
 import {BrowserRouter as Router, Route, Routes, Navigate} from 'react-router-dom';
-import Crafting from "./routes/Crafting.jsx";
-import Walkthrough from "./routes/Walkthrough.jsx";
-import SplashPage from "./routes/splashPage.jsx";
+import Crafting from "./assets/routes/Crafting.jsx";
+import Walkthrough from "./assets/routes/Walkthrough.jsx";
+import SplashPage from "./assets/routes/splashPage.jsx";
 
 const App = () => {
     return (

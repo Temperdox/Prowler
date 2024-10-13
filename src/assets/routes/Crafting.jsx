@@ -1,16 +1,16 @@
 import { useState, useEffect } from 'react';
-import '../assets/css/Crafting.css';
-import itemsData from '../assets/json/Items.json'; // Import your JSON file
+import '../css/Crafting.css';
+import itemsData from '../json/Items.json'; // Import your JSON file
 import {faArrowLeft, faFilter, faMapPin} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import resourceSpriteMap from '../assets/js/resourceSpriteMap.js';
+import resourceSpriteMap from '../js/resourceSpriteMap.js';
 import {useNavigate} from "react-router-dom"; // Update the path as necessary
 
-const iconSrc = new URL('../assets/images/maps/IconSet.gif', import.meta.url).href;
-const Swamp = new URL('../assets/images/maps/map-Swamp.png', import.meta.url).href;
-const Savannah = new URL('../assets/images/maps/map-Savannah.png', import.meta.url).href;
-const Stream = new URL('../assets/images/maps/map-Stream.png', import.meta.url).href;
+const iconSrc = new URL('./assets/images/IconSet.gif', import.meta.url).href;
+const Swamp = new URL('./assets/images/maps/map-Swamp.png', import.meta.url).href;
+const Savannah = new URL('./assets/images/maps/map-Savannah.png', import.meta.url).href;
+const Stream = new URL('./assets/images/maps/map-Stream.png', import.meta.url).href;
 
 const Crafting = ({ setView }) => {
     const [searchTerm, setSearchTerm] = useState(''); // Search term state
