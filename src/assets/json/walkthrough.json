@@ -1,0 +1,63 @@
+{
+  "General Information" : {
+    "class" : "main",
+    "Species" : {
+      "Prowler": {
+        "Kivuli": {
+          "class" : "character-card",
+          "title" : "Kivuli",
+          "content" : {
+            "list": {
+              "description": "The playable main character.",
+              "gender": "Male"
+            }
+          }
+        },
+        "Makuri": {
+          "class" : "character-card",
+          "title" : "Makuri",
+          "content" : {
+            "list" : {
+              "description" : "Dusk Prowlers <s>ex-</s>chief.",
+              "gender" : "Male"
+            }
+          }
+        },
+        "Samuri": {
+          "class" : "character-card",
+          "title" : "Samuri",
+          "content" : {
+            "list" : {
+              "description" : "Kivuli's Pack Brother.",
+              "gender" : "Male"
+            }
+          }
+        }
+      },
+      "Hawkster" : {
+        "Hu-mina" : {
+          "class" : "character-card",
+          "title" : "Hu-mina",
+          "content" : {
+            "list" : {
+              "description" : "A female merchant that frequented the Dusk Prowler's camp. Companion of Garth.",
+              "gender" : "Female"
+            }
+          }
+        }
+      }
+    }
+  },
+  "Introduction" : {
+    "class" : "main"
+  },
+  "Main Camp" : {
+    "class" : "main"
+  },
+  "Main Locations" : {
+    "class" : "main"
+  },
+  "Sub Locations" : {
+    "class" : "main"
+  }
+}

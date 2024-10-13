@@ -1,0 +1,465 @@
+#root{
+  overflow: hidden;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.modal{
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: max-content;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.95);
+  width: max-content;
+  padding: 5rem;
+  z-index: 999;
+  display: grid;
+}
+
+.modalImage{
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  position: relative;
+}
+
+.modal-buttons{
+  margin: 0 auto;
+}
+
+.modal button {
+  margin: 1rem;
+}
+
+.splashPage-wrapper {
+  height: 100%;
+  width: 100vw;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  background-color: #00002a;
+}
+
+.section{
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.night-sky{
+  background: linear-gradient(15deg, rgb(0, 0, 32) 10%, #340040 100%);
+  position: absolute;
+  height: 100vh;
+}
+
+
+#star-canvas{
+  background-attachment: fixed;
+  width: 120%;
+  height: 100vh;
+  background-position: bottom center;
+  background-repeat: repeat-x;
+  left: -10%;
+  position: sticky;
+  overflow: hidden; /* Added this line to prevent parallax from showing past the section */
+  top: 0; /* Ensure the parallax element stays within the section bounds */
+  bottom: 0; /* Ensure the parallax element stays within the section bounds */
+}
+
+.star-fade{
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  background: linear-gradient(15deg, rgb(0, 0, 37) 10%, rgba(52, 0, 64, 0) 100%);
+}
+
+.parallax{
+  background-attachment: fixed;
+  width: 120%;
+  height: inherit;
+  background-position: bottom center;
+  background-repeat: repeat-x;
+  left: -10%;
+  position: sticky;
+  overflow: hidden; /* Added this line to prevent parallax from showing past the section */
+  top: 0; /* Ensure the parallax element stays within the section bounds */
+  bottom: 0; /* Ensure the parallax element stays within the section bounds */
+}
+
+.splashPage-title{
+  background-image: url('./assets/images/ProwlerLogo.png');
+  width: 98%;
+  height: 98%;
+  background-size: 54%;
+  background-position: 15px 8px;
+  position: absolute;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  top: 8%;
+  left: 25vw;
+  filter: contrast(0.9) brightness(1.1);
+  pointer-events: none;
+}
+
+.parallax-title-mask{
+  content: '';
+  background-color: #15816d;
+  transform: scale(1.05);
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  top: 5%;
+  left: 25vw;
+  mask: url('./assets/images/ProwlerLogo.png');
+  mask-repeat: no-repeat;
+}
+
+.scroll-downs {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 26vh;
+  left: -1vw;
+  margin: auto;
+  width: 34px;
+  height: 55px;
+  z-index: 9;
+  pointer-events: none;
+  display: ruby;
+}
+.mousey {
+  width: 3px;
+  padding: 10px 15px;
+  height: 35px;
+  border: 3px solid #fff;
+  border-radius: 25px;
+  opacity: 0.75;
+  box-sizing: content-box;
+}
+.scroller {
+  width: 3px;
+  height: 10px;
+  border-radius: 25%;
+  background-color: #fff;
+  animation-name: scroll;
+  animation-duration: 2.2s;
+  animation-timing-function: cubic-bezier(.15,.41,.69,.94);
+  animation-iteration-count: infinite;
+}
+
+.scroll-text{
+  position: relative;
+  width: max-content;
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+.version-box {
+  z-index: 998;
+  position: absolute;
+  top: 24.5%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0 auto;
+  text-align: center;
+  padding: 16px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  color: white;
+  font-weight: 800;
+}
+
+.wedge-box {
+  clip: rect(0, auto, auto, 0);
+  margin-right: -33px;
+  margin-left: -33px;
+  z-index: 1;
+  border-radius: 5px;
+  background-color: rgb(93, 35, 175);
+}
+
+.wedge-15{
+  margin: 0 auto;
+  height: inherit;
+  top: 0;
+  bottom: 0;
+  padding: 19px !important;
+  transform: skewX(-19deg) skewY(0deg) scale(1.15);
+  border-radius: 5px;
+  left: 0;
+  right: 0;
+  position: relative;
+  overflow: hidden;
+  background-color: rgb(93, 35, 175);
+}
+
+.wedge-l{
+  margin-left: 10px;
+}
+
+.wedge-r{
+  margin-right: 10px;
+}
+
+.version-box div{
+  padding: 10px;
+  overflow: hidden;
+}
+
+.game-box{
+  position: absolute;
+  top:30%;
+  display: inline-flex;
+  background-color: rgb(93, 35, 175, 0.75);
+  border-radius: 15px;
+  padding: 10px;
+  width: max-content;
+  justify-content: space-evenly;
+  align-items: center;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+}
+
+.game-image{
+  border-radius: 15px;
+  height: 30%;
+  width: 30%;
+}
+
+.game-container{
+  text-align: center;
+  margin-left: 30px;
+}
+
+.game-button{
+  height: max-content;
+  background-color: #f85b5b;
+  transition: 200ms;
+  color: black;
+}
+
+.game-button:hover{
+  background-color: #cd3b3b;
+  transition: 200ms;
+  color: black;
+}
+
+.v-center{
+  display: grid;
+  align-content: space-evenly;
+  justify-content: space-evenly;
+  align-items: center;
+  justify-items: center;
+}
+
+@keyframes scroll {
+  0% { opacity: 0; }
+  10% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(15px); opacity: 0;}
+}
+
+footer{
+  width: 100%;
+  height: 12vh;
+  background: linear-gradient(to bottom, rgb(0, 0, 42) 10%, #31003e 100%);
+}
+
+footer:before{
+  content: '';
+  background: radial-gradient(circle, #21d321, rgb(0, 0, 42));
+  border-radius: 50%;
+  height: 3px;
+  width: 80%;
+  left: 10%;
+  position: absolute;
+}
+
+.footerBg{
+  background-size: contain;
+  width: 96vw;
+  left: 1.5vw;
+  height: 136px;
+  margin: 10px 0 10px 0;
+  position: relative;
+}
+
+.footer-wrapper{
+  display: flex;
+}
+
+.footer-top{
+  display: inline-flex;
+}
+
+.footer-top div{
+  margin: 0 5%;
+}
+
+.about-me{
+  width: 40%;
+  font-size: .7em;
+}
+
+.social-media{
+  width: 40%;
+  display: inline-grid;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  align-content: space-evenly;
+}
+
+.social-media div{
+  width: 150%;
+}
+
+.r1{
+  display: inline-flex;
+  justify-content: space-evenly;
+}
+
+.r2{
+  display: inline-flex;
+  justify-content: space-evenly;
+}
+
+.social-media-icon{
+  margin: 10px auto;
+  cursor: pointer;
+}
+
+a:hover .social-media-icon{
+  color: white;
+  transform: scale(1.1);
+}
+
+.footer-bottom{
+
+}
+
+@media screen and (max-width: 700px) {
+  .parallax{
+    background-size: 155vh;
+    margin-left: 50vw;
+  }
+
+  .splashPage-title{
+    background-size: 84%;
+    left: 7vw;
+  }
+
+  .version-box{
+    font-size: 2.8vw;
+    top: 18%;
+    width: 50vw;
+  }
+
+  .version-box div{
+    padding: 3.4vw;
+    margin-bottom: -1px;
+  }
+
+  .wedge-15{
+    padding: 4.8vw !important;
+  }
+
+  .wedge-r{
+    margin-right: 10px;
+  }
+
+  .wedge-l{
+    margin-left: 10px;
+  }
+
+  .wedge-box{
+    margin-bottom: -1px;
+  }
+
+  .game-box{
+    font-size: 2.9vw;
+    width: 70%;
+  }
+
+  .game-image{
+    height: 45%;
+    width: 45%;
+  }
+
+  .scroll-downs {
+    bottom: 38vh;
+  }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 700px) {
+  .parallax{
+    background-size: 155vh;
+    margin-left: 15vh;
+  }
+}
+
+@media screen and (max-height: 1200px) and (min-width: 700px) {
+  .splashPage-title{
+    z-index: 9999;
+    top: 2%;
+  }
+
+  .version-box{
+    top: 18%;
+  }
+
+  .game-box{
+    top: 25%;
+  }
+
+  .scroll-downs{
+    z-index: 9999;
+    margin: auto;
+    left: 0;
+    bottom: 36vh;
+  }
+
+}

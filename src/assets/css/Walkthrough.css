@@ -1,0 +1,387 @@
+.walkthrough-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.flowchart-wrapper {
+    flex: 1;
+    position: relative;
+    background-color: #f3f3f3;
+}
+
+.zoom-controls {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10;
+}
+
+button {
+    margin: 10px;
+    padding: 10px;
+    background-color: #4caf50;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Walkthrough.css */
+.node-connections {
+    width: 100vw; /* 80% of the viewport width */
+    height: 100%; /* 80% of the viewport height */
+    position: relative; /* Ensure that it can properly contain the React Flow component */
+}
+
+.react-flow__node {
+    cursor: pointer;
+    background-color: #21d321 !important;
+    color: black !important;
+    font-weight: bold !important;
+    box-shadow: 6px 2px 15px rgba(86, 246, 42, 0.3),
+    -6px 2px 15px rgba(163, 232, 147, 0.3);
+}
+
+.react-flow__node:focus {
+    box-shadow: 6px 2px 15px rgba(86, 246, 42, 0.5),
+    -6px 2px 15px rgba(163, 232, 147, 0.5)!important;
+}
+
+[data-id="1"]{
+    background-color: white;
+}
+
+.react-flow__node-cardNode .wrapper {
+    border-radius: 5px;
+    height: 100%;overflow: hidden;
+    display: flex;
+    padding: 2px;
+    position: relative;
+    flex-grow: 1;
+
+}
+
+.react-flow__node-cardNode{
+    border-radius: 5px;
+    width: 150px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #21d321 !important;
+    color: black !important;
+    font-weight: bold !important;
+    box-shadow: 6px 2px 15px rgba(42, 138, 246, 0.3),
+    -6px 2px 15px rgba(233, 42, 103, 0.3);
+}
+
+.gradient:before {
+    content: '';
+    position: absolute;
+    padding-bottom: calc(100% * 1.41421356237);
+    width: calc(100% * 1.41421356237);
+    background: conic-gradient(
+            from -160deg at 50% 50%,
+            #e92a67 0deg,
+            #a853ba 120deg,
+            #2a8af6 240deg,
+            #e92a67 360deg
+    );
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 100%;
+}
+
+.card-node {
+    display: flex;
+    border-radius: 5px;
+}
+
+.card-node .inner{
+    background: #242424;
+    flex-grow: 1;
+    position: relative;
+    padding: 8px;
+    border-radius: 4px;
+    height: 100%;
+    color: white;
+}
+
+.card-node .inner:hover{
+    background: #5e5e5e;
+    flex-grow: 1;
+    position: relative;
+    padding: 8px;
+    border-radius: 4px;
+    height: 100%;
+    color: white;
+}
+
+.card-node, .card-node .inner:hover {
+    transition: all 300ms ease;
+}
+
+.card-node:hover:not(.popup-content:hover) {
+    box-shadow: 6px 2px 15px rgba(42, 138, 246, 0.45),
+    -6px 2px 15px rgba(233, 42, 103, 0.45);
+}
+
+.card-node:focus, .react-flow__node:focus {
+    box-shadow: 6px 2px 15px rgba(42, 138, 246, 0.85),
+    -6px 2px 15px rgba(233, 42, 103, 0.85) !important;
+}
+
+.popup-content {
+    position: absolute;
+    top: -10px;
+    left: 160px;
+    width: 200px;
+    height: 150px;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    z-index: 100;
+    visibility: hidden;
+    transition: transform 300ms ease;
+}
+
+.popup-content:before {
+    position: absolute;
+    top: -10px;
+    left: 180px;
+    width: auto;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    z-index: 100;
+}
+
+.popup-content:hover{
+    transform: scale(1.05);
+    transition: transform 300ms ease;
+}
+
+.popup-content:hover .cardTitleBg,
+.popup-content:hover .cardTitleBg-shadow {
+    transform: scale(1.1);
+    transition: transform 300ms ease;
+}
+
+.popup-content .header {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.popup-content .titleName{
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+    z-index: 7;
+    position: absolute;
+    height: max-content;
+    left: 90%;
+}
+
+.popup-content .content {
+    font-size: 14px;
+    border-radius: 15px;
+    left: 0;
+    right: 0;
+    position: relative;
+    margin: 0 auto;
+    width: 80%;
+    padding: 20px;
+    background-color: transparent;
+    z-index: 1;
+    overflow: hidden;
+    height: 150px;
+}
+.popup-content .content:after {
+    display: block;
+    content: '';
+    font-size: 14px;
+    border-radius: 15px;
+    left: 0;
+    right: 0;
+    position: absolute;
+    margin: 0 auto;
+    width: 67%;
+    height: 194px;
+    padding: 20px;
+    background-color: #15161e;
+    z-index: -1;
+    top: 45px;
+    transform: skewX(0deg) skewY(-30deg) skewX(0deg) skewY(15deg) scale(1.15);
+}
+
+.popup-content .content-bg {
+    position: relative;
+    z-index: 1;
+    background: linear-gradient(to bottom, rgba(102, 35, 135, 0.91), transparent 25%, black 100%);
+}
+
+.popup-content .content ul{
+    position: relative;
+    z-index: 3;
+    display: block;
+    /* align-self: center; */
+    justify-content: center;
+    top: 0;
+    bottom: 0px;
+    margin: 54px auto;
+    font-size: smaller;
+}
+
+.popup-content .content-wedge{
+    height: 93px;
+    background-size: cover;
+    transform: skewX(0deg) skewY(-19deg) scale(1.15);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    /*background-color: #1b1c27;*/
+    font-size: 14px;
+    left: 0;
+    right: 0;
+    top: -50px;
+    position: absolute;
+    margin: 0 auto;
+    width: 60.5%;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.popup-content .content-wedge:before{
+    content: '';
+    background-image: url("@/assets/images/misc/CG_ClearingNightSky0.png");
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    display: block;
+    transform: skewX(0deg) skewY(15deg) scale(2.15);
+    background-position: -154px -83px;
+    filter: brightness(0.5);
+    mask-image: linear-gradient(-15deg, black 50%, transparent 95%);
+    pointer-events: none;
+}
+
+.card-title{
+    background-color: transparent;
+    position: relative;
+    height: 25px;
+}
+
+.walkthrough-container .cardTitleBg {
+    height: 330px;
+    width: 100%;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: absolute;
+    overflow: hidden;
+    right: 0px;
+    top: -153px;
+    mask-image: linear-gradient(-20deg, transparent 40%, black 55%);
+    z-index: 3;
+    pointer-events: none;
+    transition: transform 300ms ease;
+}
+
+.walkthrough-container .cardTitleBg-shadow{
+    content: '';
+    height: 330px;
+    width: 100%;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: 2;
+    filter: blur(1px) brightness(0);
+    opacity: 0.6;
+    right: -5px;
+    top: -148px;
+    mask-image: linear-gradient(-20deg, transparent 40%, black 55%);
+    pointer-events: none;
+    transition: transform 300ms ease;
+}
+
+.active-node .inner{
+    background-color: #21d321 !important;
+    color: black;
+    transition: 300ms;
+}
+
+.active-node .inner:hover{
+    color: black;
+}
+
+.walkthrough-container .spoiler{
+    filter: blur(5px);
+}
+.walkthrough-container .spoiler:hover{
+    filter: blur(0px);
+}
+
+.react-flow__node {
+    visibility: visible !important;
+}
+
+.react-flow__minimap .cardNode {
+    fill: rgb(208, 192, 247);
+}
+
+.react-flow__minimap .default {
+    fill: rgb(192, 247, 214);
+}
+
+.react-flow__node .react-flow__handle,
+.react-flow__node-circle .react-flow__handle,
+.react-flow__node-textinput .react-flow__handle {
+    background: #bbb;
+    border-radius: 0;
+    width: 8px;
+    height: 4px;
+    border: none;
+    min-width: 2px;
+    min-height: 2px;
+}
+
+.react-flow__node .react-flow__handle-bottom,
+.react-flow__node-circle .react-flow__handle-bottom,
+.react-flow__node-textinput .react-flow__handle-bottom {
+    bottom: -7px;
+    transform: none;
+    border-radius: 0 0 2px 2px;
+}
+
+.react-flow__node .react-flow__handle-top,
+.react-flow__node-circle .react-flow__handle-top,
+.react-flow__node-textinput .react-flow__handle-top {
+    top: -7px;
+    transform: none;
+    border-radius: 2px 2px 0 0;
+}
+
+.react-flow__node .react-flow__handle-left,
+.react-flow__node-circle .react-flow__handle-left,
+.react-flow__node-textinput .react-flow__handle-left {
+    height: 8px;
+    width: 4px;
+    left: -7px;
+    border-radius: 2px 0 0 2px;
+}
+.react-flow__node .react-flow__handle-right,
+.react-flow__node-circle .react-flow__handle-right,
+.react-flow__node-textinput .react-flow__handle-right {
+    height: 8px;
+    width: 4px;
+    right: -7px;
+    border-radius: 0 2px 2px 0;
+}
+

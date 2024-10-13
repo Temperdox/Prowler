@@ -15,7 +15,7 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: #0ffbd5;
   text-decoration: inherit;
 }
 a:hover {
@@ -31,6 +31,7 @@ body {
 }
 
 h1 {
+  font-size: 3.2em;
   line-height: 1.1;
 }
 
@@ -39,12 +40,11 @@ button {
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
   font-size: 1em;
-  font-weight: 800;
+  font-weight: 500;
   font-family: inherit;
-  background-color: #21d321;
+  background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
-  color: #242424;
 }
 button:hover {
   border-color: #646cff;
@@ -66,14 +66,3 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
-
-@media screen and (max-width: 700px) {
-  a {
-    font-size:2vw;
-  }
-
-  h1{
-    font-size: 8.2vw;
-  }
-}
-
