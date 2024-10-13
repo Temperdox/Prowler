@@ -126,7 +126,7 @@
 }
 
 .splashPage-title{
-  background-image: url('./assets/images/ProwlerLogo.png');
+  background-image: url('src/assets/images/ProwlerLogo.png');
   width: 98%;
   height: 98%;
   background-size: 54%;
@@ -134,10 +134,11 @@
   position: absolute;
   background-repeat: no-repeat;
   margin: 0 auto;
-  top: 8%;
+  top: 6%;
   left: 25vw;
   filter: contrast(0.9) brightness(1.1);
   pointer-events: none;
+  z-index: 99999;
 }
 
 .parallax-title-mask{
