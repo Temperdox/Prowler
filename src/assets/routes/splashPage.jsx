@@ -96,7 +96,7 @@ function SplashPage() {
 
     const transformLayer = ({x, y}) => {
         // Define the parallax image location
-        const parallaxImageLoc = './images/splash/';
+        const parallaxImageLoc = './../assets/images/splash/';
         // Simulate the list of files (in real-life scenarios you might want to fetch these from the server)
         const listOfFiles = [
             'farMountains.webp',
@@ -179,7 +179,7 @@ function SplashPage() {
                         </div>
                     </div>
                     <div className="game-box">
-                        <img className="game-image" src="./assets/images/ProwlerDownloadImage.png"
+                        <img className="game-image" src="./src/assets/images/ProwlerDownloadImage.png"
                              alt="Prowler Download Image"/>
                         <div className="game-container">
                             <h3>Get the game on Itch.io!</h3>
