@@ -1,21 +1,15 @@
  import {useEffect, useRef, useState} from 'react';
 import {
-    BrowserRouter as Router,
-    Route,
-    Routes,
-    Link,
     useNavigate,
     useLocation
 } from 'react-router-dom';
-import '../splashPage.css';
+import '../assets/css/splashPage.css';
 import Modal from '../assets/components/modal.jsx';
 import Cookies from 'js-cookie';
 import Card from "../assets/components/card.jsx";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faCalculator, faList, faMap} from "@fortawesome/free-solid-svg-icons";
 import {faXTwitter, faDiscord, faItchIo} from "@fortawesome/free-brands-svg-icons";
-import Crafting from "./Crafting.jsx";
-import Walkthrough from "./Walkthrough.jsx";
 import initializeStarCanvas from '../assets/js/splashStars.js';
 
 function SplashPage() {
@@ -141,7 +135,7 @@ function SplashPage() {
     return (
         <>
             <Modal show={!isVerified}>
-                <img className="modalImage" src="./src/assets/images/AgeWarningLabel.png"
+                <img className="modalImage" src="../assets/images/AgeWarningLabel.png"
                      alt="18+ Warning Label Image"/>
                 <p>By accessing this site, you agree and declare that you are of legal age to view adult content such as
                     but not limited to NSFW (not safe for work) material.</p>
@@ -185,7 +179,7 @@ function SplashPage() {
                         </div>
                     </div>
                     <div className="game-box">
-                        <img className="game-image" src="./src/assets/images/ProwlerDownloadImage.png"
+                        <img className="game-image" src="../assets/images/ProwlerDownloadImage.png"
                              alt="Prowler Download Image"/>
                         <div className="game-container">
                             <h3>Get the game on Itch.io!</h3>
@@ -205,14 +199,14 @@ function SplashPage() {
                 </div>
                 <div className="section v-center">
                     <Card
-                        imgUrl="./src/assets/images/testImage.jpg"
+                        imgUrl="../assets/images/testImage.jpg"
                         title="Crafting Calculator"
                         description="A tool to calculate the total cost of materials needed to craft selected items."
                     >
                         <FontAwesomeIcon icon={faCalculator} size="3x"/>
                     </Card>
                     <Card
-                        imgUrl="./src/assets/images/testImage.jpg"
+                        imgUrl="../assets/images/testImage.jpg"
                         title="Interactive Map"
                         description="An interactive map that certain locations can be selected to view various information about the destination. Examples include resources and enimies."
                         position="right"
@@ -220,7 +214,7 @@ function SplashPage() {
                         <FontAwesomeIcon icon={faMap} size="3x"/>
                     </Card>
                     <Card
-                        imgUrl="./src/assets/images/testImage.jpg"
+                        imgUrl="../assets/images/testImage.jpg"
                         title="Walkthrough Flowchart"
                         description="An interactive flowchart that can be expanded to see various information about accessible routes, game overs, nsfw scenes and other information."
                     >

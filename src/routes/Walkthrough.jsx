@@ -5,8 +5,6 @@ import '../assets/css/Walkthrough.css';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import VisibilityHandler from '../assets/components/VisibilityHandler.jsx'; // Import the visibility handler
-/*import { populateNodes } from './../components/populateNodes.jsx';
-import walkthroughData from './../walkthrough.json';*/
 import CardNode from "../assets/components/CardNode.jsx";
 import { iNodes as initialNodes, iEdges as initialEdges } from '../assets/components/InitialElements.jsx';
 import {useNavigate} from "react-router-dom";

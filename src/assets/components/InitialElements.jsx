@@ -1,9 +1,9 @@
 
 import { MarkerType } from '@xyflow/react';
-import kivuli from './../images/characters/Dialogue_KivuNaked.png'
-import maku from './../images/characters/Dialogue_Maku2.png'
-import samuri from './../images/characters/Dialogue_Sumari2.png'
-import humina from './../images/characters/Dialogue_Merchant1.png'
+import kivuli from '../images/characters/Dialogue_KivuNaked.png'
+import maku from '../images/characters/Dialogue_Maku2.png'
+import samuri from '../images/characters/Dialogue_Sumari2.png'
+import humina from '../images/characters/Dialogue_Merchant1.png'
 
 export const iNodes = [
     //GeneralInformation Branch
