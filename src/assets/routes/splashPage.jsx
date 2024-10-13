@@ -96,7 +96,7 @@ function SplashPage() {
 
     const transformLayer = ({x, y}) => {
         // Define the parallax image location
-        const parallaxImageLoc = './../images/splash/';
+        const parallaxImageLoc = './images/splash/';
         // Simulate the list of files (in real-life scenarios you might want to fetch these from the server)
         const listOfFiles = [
             'farMountains.webp',
@@ -135,7 +135,7 @@ function SplashPage() {
     return (
         <>
             <Modal show={!isVerified}>
-                <img className="modalImage" src="./../images/AgeWarningLabel.png"
+                <img className="modalImage" src="./images/AgeWarningLabel.png"
                      alt="18+ Warning Label Image"/>
                 <p>By accessing this site, you agree and declare that you are of legal age to view adult content such as
                     but not limited to NSFW (not safe for work) material.</p>
@@ -179,7 +179,7 @@ function SplashPage() {
                         </div>
                     </div>
                     <div className="game-box">
-                        <img className="game-image" src="./../images/ProwlerDownloadImage.png"
+                        <img className="game-image" src="./images/ProwlerDownloadImage.png"
                              alt="Prowler Download Image"/>
                         <div className="game-container">
                             <h3>Get the game on Itch.io!</h3>
