@@ -96,7 +96,7 @@ function SplashPage() {
 
     const transformLayer = ({x, y}) => {
         // Define the parallax image location
-        const parallaxImageLoc = './assets/images/splash/';
+        const parallaxImageLoc = '../images/splash/';
         // Simulate the list of files (in real-life scenarios you might want to fetch these from the server)
         const listOfFiles = [
             'farMountains.webp',
