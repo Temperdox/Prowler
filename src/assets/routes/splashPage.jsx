@@ -92,7 +92,7 @@ function SplashPage() {
     }, []);
 
     const transformLayer = ({x, y}) => {
-        const parallaxImageLoc = '../';
+        const parallaxImageLoc = '../assets/';
 
         const listOfFiles = [
             'farMountains.webp',
