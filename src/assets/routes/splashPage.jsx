@@ -92,9 +92,8 @@ function SplashPage() {
     }, []);
 
     const transformLayer = ({x, y}) => {
-        // Define the parallax image location
         const parallaxImageLoc = '../images/';
-        // Simulate the list of files (in real-life scenarios you might want to fetch these from the server)
+
         const listOfFiles = [
             'farMountains.webp',
             'midMountains.webp',
@@ -103,12 +102,35 @@ function SplashPage() {
             'mist.webp',
             'frontTrees.webp'
         ];
+
         document.querySelectorAll('.parallax').forEach((layer, i) => {
             const speed = (i + 1) * 0.1;
-            layer.style.backgroundImage = new URL(`${parallaxImageLoc}${listOfFiles[(i)]}`, window.location.origin).toString();
-            layer.style.transform = `translate3d(${-(x * (speed / 10) + 220)}px,${-1 * (-y * (speed / 8))}px, 0)`;
-            layer.style.willChange = 'transform';
-            layer.style.zIndex = `${i + 1}`; // Ensure z-index starts from 1
+
+            // Construct background URL only if it's not already set
+            const imageUrl = new URL(`${parallaxImageLoc}${listOfFiles[i]}`, window.location.origin).toString();
+            if (!layer.style.backgroundImage.includes(imageUrl)) {
+                layer.style.backgroundImage = `url(${imageUrl})`;
+            }
+
+            const transformX = -(x * (speed / 10) + 220);
+            const transformY = -1 * (-y * (speed / 8));
+
+            // Only apply the transform style if it's changed
+            const transformString = `translate3d(${transformX}px, ${transformY}px, 0)`;
+            if (layer.style.transform !== transformString) {
+                layer.style.transform = transformString;
+            }
+
+            // If necessary, set will-change only once.
+            if (layer.style.willChange !== 'transform') {
+                layer.style.willChange = 'transform';
+            }
+
+            // Set z-index only if necessary
+            const zIndex = `${i + 1}`;
+            if (layer.style.zIndex !== zIndex) {
+                layer.style.zIndex = zIndex;
+            }
         });
     }
 
