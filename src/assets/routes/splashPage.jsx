@@ -1,15 +1,12 @@
- import {useEffect, useRef, useState} from 'react';
-import {
-    useNavigate,
-    useLocation
-} from 'react-router-dom';
+import {useEffect, useRef, useState} from 'react';
+import {useLocation, useNavigate} from 'react-router-dom';
 import '../css/splashPage.css';
 import Modal from '../components/modal.jsx';
 import Cookies from 'js-cookie';
 import Card from "../components/card.jsx";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faCalculator, faList, faMap} from "@fortawesome/free-solid-svg-icons";
-import {faXTwitter, faDiscord, faItchIo} from "@fortawesome/free-brands-svg-icons";
+import {faDiscord, faItchIo, faXTwitter} from "@fortawesome/free-brands-svg-icons";
 import initializeStarCanvas from '../js/splashStars.js';
 
 function SplashPage() {
@@ -108,7 +105,7 @@ function SplashPage() {
         ];
         document.querySelectorAll('.parallax').forEach((layer, i) => {
             const speed = (i + 1) * 0.1;
-            layer.style.backgroundImage = `url(${parallaxImageLoc}${listOfFiles[(i)]})`;
+            layer.style.backgroundImage = new URL(`${parallaxImageLoc}${listOfFiles[(i)]}`, window.location.origin).toString();
             layer.style.transform = `translate3d(${-(x * (speed / 10) + 220)}px,${-1 * (-y * (speed / 8))}px, 0)`;
             layer.style.willChange = 'transform';
             layer.style.zIndex = `${i + 1}`; // Ensure z-index starts from 1
