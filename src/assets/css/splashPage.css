@@ -126,7 +126,7 @@
 }
 
 .splashPage-title{
-  background-image: url('../images/ProwlerLogo.png');
+  background-image: url('/images/ProwlerLogo.png');
   width: 98%;
   height: 98%;
   background-size: 54%;
