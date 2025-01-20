@@ -12,7 +12,7 @@ const Swamp = new URL('./assets/images/maps/map-Swamp.png', import.meta.url).hre
 const Savannah = new URL('./assets/images/maps/map-Savannah.png', import.meta.url).href;
 const Stream = new URL('./assets/images/maps/map-Stream.png', import.meta.url).href;
 
-const Crafting = ({ setView }) => {
+const Crafting = () => {
     const [searchTerm, setSearchTerm] = useState(''); // Search term state
     const [filteredItems, setFilteredItems] = useState(Object.keys(itemsData)); // State for filtered items
     const [selectedItems, setSelectedItems] = useState([]); // For storing selected items

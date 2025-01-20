@@ -8,6 +8,12 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faCalculator, faList, faMap} from "@fortawesome/free-solid-svg-icons";
 import {faDiscord, faItchIo, faXTwitter} from "@fortawesome/free-brands-svg-icons";
 import initializeStarCanvas from '../js/splashStars.js';
+import farMountains from '../images/splash/farMountains.webp'
+import midMountains from '../images/splash/midMountains.webp'
+import farTrees from '../images/splash/farTrees.webp'
+import camp from '../images/splash/camp.png'
+import mist from '../images/splash/mist.webp'
+import frontTrees from '../images/splash/frontTrees.webp'
 
 function SplashPage() {
     const [isVerified, setIsVerified] = useState(false);
@@ -92,22 +98,20 @@ function SplashPage() {
     }, []);
 
     const transformLayer = ({x, y}) => {
-        const parallaxImageLoc = '../assets/splash/';
-
         const listOfFiles = [
-            'farMountains.webp',
-            'midMountains.webp',
-            'farTrees.webp',
-            'camp.webp',
-            'mist.webp',
-            'frontTrees.webp'
+            farMountains,
+            midMountains,
+            farTrees,
+            camp,
+            mist,
+            frontTrees
         ];
 
         document.querySelectorAll('.parallax').forEach((layer, i) => {
             const speed = (i + 1) * 0.1;
 
             // Construct background URL only if it's not already set
-            const imageUrl = new URL(`${parallaxImageLoc}${listOfFiles[i]}`, window.location.origin).toString();
+            const imageUrl = new URL(`${listOfFiles[i]}`, window.location.origin).toString();
             if (!layer.style.backgroundImage.includes(imageUrl)) {
                 layer.style.backgroundImage = `url(${imageUrl})`;
             }
@@ -199,7 +203,7 @@ function SplashPage() {
                     </div>
                     <div className="game-box">
                         {/*<img className="game-image" src="../images/ProwlerDownloadImage.png"*/}
-                        <img className="game-image" src=""
+                        <img className="game-image" src="./../../../src/assets/images/ProwlerDownloadImage.png"
                              alt="Prowler Download Image"/>
                         <div className="game-container">
                             <h3>Get the game on Itch.io!</h3>
