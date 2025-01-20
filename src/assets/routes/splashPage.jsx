@@ -14,6 +14,8 @@ import farTrees from '../images/splash/farTrees.webp'
 import camp from '../images/splash/camp.png'
 import mist from '../images/splash/mist.webp'
 import frontTrees from '../images/splash/frontTrees.webp'
+import prowlerDowmloadImage from '../images/ProwlerDownloadImage.png'
+import ageWarningLabel from '../images/AgeWarningLabel.png'
 
 function SplashPage() {
     const [isVerified, setIsVerified] = useState(false);
@@ -158,7 +160,7 @@ function SplashPage() {
     return (
         <>
             <Modal show={!isVerified}>
-                <img className="modalImage" src="../images/AgeWarningLabel.png"
+                <img className="modalImage" src={ageWarningLabel}
                      alt="18+ Warning Label Image"/>
                 <p>By accessing this site, you agree and declare that you are of legal age to view adult content such as
                     but not limited to NSFW (not safe for work) material.</p>
@@ -203,7 +205,7 @@ function SplashPage() {
                     </div>
                     <div className="game-box">
                         {/*<img className="game-image" src="../images/ProwlerDownloadImage.png"*/}
-                        <img className="game-image" src="./../../../src/assets/images/ProwlerDownloadImage.png"
+                        <img className="game-image" src={prowlerDowmloadImage}
                              alt="Prowler Download Image"/>
                         <div className="game-container">
                             <h3>Get the game on Itch.io!</h3>
